@@ -3,18 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Dealer - DCMG</title>
+
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+
+    <script
+      src="https://kit.fontawesome.com/072e5df971.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootswatch@5.2.2/package.json"></script>
+
+    <link rel="shortcut icon" href="./paper-plane.ico" />
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
+      <!-- <h1 class="mt-5">Hello Rigo!</h1>
       <img src="./rigo-baby.jpg" />
       <p class="alert alert-warning mt-4">
         If this text is <b>not</b> centered and <b>yellow</b>, you probably have
@@ -23,6 +32,102 @@
       <div class="fixed-bottom p-4">
         Made with ❤️ by
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      </div> -->
+
+      <div class="card col-4-center" id="card">
+        <div class="left" name="symbol" id="symbolLeft">
+          ♥
+          <!-- ♦♠ ♣-->
+        </div>
+        <div class="card-body" id="card-body">
+          <p class="card-text-center" id="cardNbr">
+            A
+          </p>
+        </div>
+        <div class="right" name="symbol" id="symbolRight">
+          ♥
+          <!-- ♦♠ ♣-->
+        </div>
+      </div>
+      <!-- <a href="#" class="fa dealIcon"></a> -->
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-light"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Deal a new card"
+          alt="Deal"
+          id="btnDeal"
+        >
+          <img src="./deal.png" width="30" />
+
+          <!-- <i class="fa-regular fa-cards"></i> -->
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-light"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Deal a new card every 10secs"
+          alt="timer Deal"
+          id="btnTimer"
+        >
+          <img src="./timer.png" width="30" />
+
+          <!-- <i class="deal-Icon"></i>  -->
+
+          <!-- <i class="fa-regular fa-timer"></i> -->
+        </button>
+
+        <div class="dropdown ">
+          <button
+            class="btn btn-light dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            data-toggle-second="tooltip"
+            title="Change card size"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-gear"></i>
+          </button>
+
+          <div class="dropdown-menu">
+            <form class="px-2 py-3" id="resizeForm">
+              Change your card size
+              <div class="form-group">
+                <label for="cardWidth">W: </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cardWidth"
+                  placeholder="width"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cardHeight">H: </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cardHeight"
+                  placeholder="Height"
+                />
+              </div>
+            </br>
+              <div class="form-group">
+                <button
+                  type="button"
+                  class="btn btn-primary mx-auto py-2"
+                  data-placement="bottom"
+                  id="btnResize"
+                >
+                  Resize
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </body>
