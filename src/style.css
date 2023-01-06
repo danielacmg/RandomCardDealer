@@ -23,8 +23,8 @@ body {
   padding: 0;
   margin: auto;
   vertical-align: middle;
-  width: 30vw;
-  height: 45vw;
+  width: 30rem;
+  height: 45vh;
 }
 .card p {
   /* vertical-align: middle; */
@@ -50,6 +50,9 @@ body {
   background-repeat: no-repeat;
 }
 
+.fa-solid fa-gear {
+  font-size: 30px !important;
+}
 .fa {
   padding: 20px;
   font-size: 30px;

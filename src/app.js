@@ -4,6 +4,7 @@ import "./style.css";
 
 import "./assets/img/deal.png";
 import "./assets/img/timer.png";
+import "./assets/img/gear.png";
 import "./assets/img/paper-plane.ico";
 
 window.onload = function() {
